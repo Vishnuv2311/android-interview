@@ -41,7 +41,7 @@ fun main() = runBlocking {
 ```
 
 ✅ Output
-
+```kotlin
 Collector 1 subscribing...
 Started Flow
 Collector 1 received: 1
@@ -53,6 +53,7 @@ Started Flow
 Collector 2 received: 1
 Collector 2 received: 2
 Collector 2 received: 3
+```
 
 📌 Each collector gets a new instance of the flow.
 
@@ -85,10 +86,11 @@ fun main() = runBlocking {
 ```
 
 ✅ Output
-
+```kotlin
 Collector received: 2
 Collector received: 3
 Collector received: 4
+```
 
 📌 The collector misses initial values (0 & 1) since StateFlow only holds the latest emitted value.
 
